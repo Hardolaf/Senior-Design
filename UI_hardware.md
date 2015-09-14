@@ -22,3 +22,7 @@ A 3PDT switch and other switches are available at [BYOC](http://buildyourownclon
 
 ## Rotary Input
 Track Selection will use a rotary encoder of at least 4-bits with Gray Code ordering for direction determination. The exact number of bits past 4 will increase the resolution when the user turns the knob, but it also increases the number of digital inputs required.
+
+Track playback volume will be controlled by a potentiometer. The center tap will be analog read by the DSP to digitally control output volume, regardless of mono vs. stereo.
+
+Guitar play-through volume will be controlled by a potentiometer. The center tap will be analog read by DSP to digitally control output volume. 
