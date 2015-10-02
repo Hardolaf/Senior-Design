@@ -23,3 +23,6 @@ a multi FX guitar pedal with true bypass.
 * Switch between recorded tracks
 * Overdub past recordings
 * Playback recordings
+
+### Other
+*RoHS Compliancy
