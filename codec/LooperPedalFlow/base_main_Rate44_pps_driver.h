@@ -7,16 +7,16 @@ typedef struct {
 } control; 
 
 
-static control MUX_controls[] = {
+static const control MUX_controls[] = {
 };
 
-static string MUX_control_names[] = {
+static const string MUX_control_names[] = {
 };
 
-static control VOLUME_controls[] = {
+static const control VOLUME_controls[] = {
 };
 
-static string VOLUME_control_names[] = {
+static const string VOLUME_control_names[] = {
 };
 
 //INSTRUCTIONS & COEFFICIENTS
@@ -25,12 +25,12 @@ typedef struct {
     u8 reg_val;
 } reg_value;
 
-static string REG_Section_names[] = {
+static const string REG_Section_names[] = {
     "miniDSP_A_reg_values",
     "miniDSP_D_reg_values",
 };
 
-reg_value REG_Section_program[] = {
+static const reg_value REG_Section_program[] = {
     {  0,0x00},
 //			# reg[  0][  1] = 0x01	; Initialize the device through software reset
     {  1,0x01},
@@ -185,7 +185,7 @@ reg_value REG_Section_program[] = {
     {100,0x00},
 };
 
-reg_value miniDSP_A_reg_values[] = {
+static const reg_value miniDSP_A_reg_values[] = {
     {  0,0x08},
     {  8,0x00},
     {  9,0xB7},
@@ -2847,7 +2847,7 @@ reg_value miniDSP_A_reg_values[] = {
 #define miniDSP_A_reg_values_INST_START    944
 #define miniDSP_A_reg_values_INST_SIZE     1711
 
-reg_value miniDSP_D_reg_values[] = {
+static const reg_value miniDSP_D_reg_values[] = {
     {  0,0x2C},
     {  8,0x40},
     {  9,0x00},
