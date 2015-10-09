@@ -1,0 +1,255 @@
+Application:  PurePath Studio (Portable Audio) MiniDSP Assembler
+File Name:    D:\capstone\Senior-Design\codec\LooperPedalFlow\base_main_Rate44\aic_main.lst
+Date:         2015-10-05 11:58:30
+Version:      version 5.95 build 1 revision 35815
+Arguments:    'aic_main.asm' /image='D:\capstone\Senior-Design\codec\LooperPedalFlow\base_main_Rate44\aic_main.image'/list='D:\capstone\Senior-Design\codec\LooperPedalFlow\base_main_Rate44\aic_main.lst' /configuration='base_main_Rate44' /debug /noploops /warnings=OFF /miniDSP_A_Adaptive /miniDSP_D_Adaptive /miniDSP_D_Adaptive1 /miniDSP_D_Adaptive2 /target=AIC3256
+================================================================================
+
+Listing for file: aic_main.asm
+
+miniDSP_A Exported Coefficients
+===============================
+Name                                      Address            I2C       
+----------------------------------------  -------    ------------------
+AGC_1_A1                                  0x0008           [0x08][0x28]   
+AGC_1_A2                                  0x0009           [0x08][0x2C]   
+AGC_1_ATTACK_COEF                         0x000B           [0x08][0x34]   
+AGC_1_B0                                  0x0005           [0x08][0x1C]   
+AGC_1_B1                                  0x0006           [0x08][0x20]   
+AGC_1_B2                                  0x0007           [0x08][0x24]   
+AGC_1_DEC_FACTOR_2                        0x0014           [0x08][0x58]   
+AGC_1_DECAY_COEF                          0x000C           [0x08][0x38]   
+AGC_1_DESIRED_LEVEL                       0x000D           [0x08][0x3C]   
+AGC_1_ENERGY_COEF                         0x000A           [0x08][0x30]   
+AGC_1_INC_FACTOR_2                        0x0013           [0x08][0x54]   
+AGC_1_MAX_GAIN_5                          0x0012           [0x08][0x50]   
+AGC_1_MIN_AUDIO                           0x000E           [0x08][0x40]   
+AGC_1_MIN_CHANGE                          0x0010           [0x08][0x48]   
+AGC_1_MIN_GAIN_5                          0x0011           [0x08][0x4C]   
+AGC_1_NOISE_LEVEL                         0x000F           [0x08][0x44]   
+AGC_2_A1                                  0x0018           [0x08][0x68]   
+AGC_2_A2                                  0x0019           [0x08][0x6C]   
+AGC_2_ATTACK_COEF                         0x001B           [0x08][0x74]   
+AGC_2_B0                                  0x0015           [0x08][0x5C]   
+AGC_2_B1                                  0x0016           [0x08][0x60]   
+AGC_2_B2                                  0x0017           [0x08][0x64]   
+AGC_2_DEC_FACTOR_2                        0x0024           [0x09][0x20]   
+AGC_2_DECAY_COEF                          0x001C           [0x08][0x78]   
+AGC_2_DESIRED_LEVEL                       0x001D           [0x08][0x7C]   
+AGC_2_ENERGY_COEF                         0x001A           [0x08][0x70]   
+AGC_2_INC_FACTOR_2                        0x0023           [0x09][0x1C]   
+AGC_2_MAX_GAIN_5                          0x0022           [0x09][0x18]   
+AGC_2_MIN_AUDIO                           0x001E           [0x09][0x08]   
+AGC_2_MIN_CHANGE                          0x0020           [0x09][0x10]   
+AGC_2_MIN_GAIN_5                          0x0021           [0x09][0x14]   
+AGC_2_NOISE_LEVEL                         0x001F           [0x09][0x0C]   
+Dec4xIn_1_AGCd1                           0x0001           [0x08][0x0C]   
+Dec4xIn_1_AGCn0and1                       0x0000           [0x08][0x08]   
+Dec4xIn_1_d1                              0x0004           [0x08][0x18]   
+Dec4xIn_1_n0                              0x0002           [0x08][0x10]   
+Dec4xIn_1_n1                              0x0003           [0x08][0x14]   
+
+miniDSP_D Exported Coefficients
+===============================
+Name                                      Address            I2C       
+----------------------------------------  -------    ------------------
+Int4xOut_1_HPF_d1                         0x0009           [0x2C][0x2C]   
+Int4xOut_1_HPF_n0                         0x0007           [0x2C][0x24]   
+Int4xOut_1_HPF_n1                         0x0008           [0x2C][0x28]   
+Stereo_Mixer_1_MixGain1                   0x0000           [0x2C][0x08]   
+Stereo_Mixer_1_MixGain2                   0x0001           [0x2C][0x0C]   
+
+
+
+Reg Code
+========
+                  line: 
+
+                                --- File: aic_main.asm ---
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+                    169:  .endencrypt 
+                    235:  .sync(65) 
+                    248:  .sync(12) 
+                    249:   
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+                     51:  .codeblock Registers target=regs, component=AIC3256App8x4x_1 
+                     52:  ;----------------------------------------------------------------------------------- 
+                     53:  ; Software Reset 
+                     54:  ;----------------------------------------------------------------------------------- 
+                     55:  	reg[  0][  1] = 0x01	; Initialize the device through software reset 
+                     56:  	reg[254][  0] = 0x0a	; Delay 10ms 
+                     57:   
+                     58:  ;----------------------------------------------------------------------------------- 
+                     59:  ; Configure Power Supplies 
+                     60:  ;----------------------------------------------------------------------------------- 
+                     61:  ; AIC3256EVM-U specific configuration 
+                     62:  ; AIC3256EVM-S specific configuration 
+                     63:  	reg[  1][  2] = 0x09	; Charge Pump 1x Current, 333kHz clock (8MHz/(6*4)); Disable weak AVDD to DVDD connection, use OSC for CP; Enable Master Analog Power Control; Set the input power-up time to 3.1ms   ; Force REF charging time to 40ms; Power up ALDO, ALDO = DLDO = 1.80V 
+                     64:  	reg[  1][  1] = 0x0a	; Disable weak AVDD to DVDD connection, use OSC for CP 
+                     65:  	reg[  1][  2] = 0x01	; Keep ALDO Powered, Enable Master Analog Power Control 
+                     66:  	reg[  1][124] = 0x16	; Charge Pump 1/8x Current, 333kHz clock (8MHz/(6*4)) 
+                     67:  	reg[  1][124] = 0x06	; Charge Pump 1x Current, 333kHz clock (8MHz/(6*4)) 
+                     68:  	reg[  1][ 71] = 0x32	; Set the input power-up time to 3.1ms    
+                     69:  	reg[  1][123] = 0x05	; Force REF charging time to 40ms 
+                     70:  	reg[254][  0] = 0x28	; Delay 40ms for REF to power up 
+                     71:   
+                     72:  ;----------------------------------------------------------------------------------- 
+                     73:  ; Load miniDSP Code 
+                     74:  ;----------------------------------------------------------------------------------- 
+                     75:  	PROGRAM_ADC		; miniDSP_A coefficients and instructions            
+                     76:  	PROGRAM_DAC		; miniDSP_D coefficients and instructions 
+                     77:   
+                     78:  ;----------------------------------------------------------------------------------- 
+                     79:  ; Signal Processing Settings 
+                     80:  ;----------------------------------------------------------------------------------- 
+                     81:  	reg[  0][ 60] = 0x00	; Use miniDSP_D for signal processing 
+                     82:  	reg[  0][ 61] = 0x00	; Use miniDSP_A for signal processing 
+                     83:   
+                     84:  	reg[  0][ 17] = 0x08	; 8x Interpolation 
+                     85:  	reg[  0][ 23] = 0x04	; 4x Decimation 
+                     86:   
+                     87:  ; 4x Interpolation; 2x Decimation 
+                     88:  ; 2x Interpolation; 1x Decimation 
+                     89:  	IDAC  = 904 
+                     90:  	IADC  = 904 
+                     91:   
+                     92:  	reg[  8][  1] = 0x04	; adaptive mode for ADC 
+                     93:   
+                     94:  	reg[ 44][  1] = 0x04	; adaptive mode for DAC 
+                     95:   
+                     96:  ;----------------------------------------------------------------------------------- 
+                     97:  ; Clock and Interface Configuration 
+                     98:  ;----------------------------------------------------------------------------------- 
+                     99:  ; USB Audio supports 8kHz to 48kHz sample rates 
+                    100:  ; An external audio interface is required for 88.2kHz to 192kHz sample rates 
+                    101:  ;----------------------------------------------------------------------------------- 
+                    102:  ; P=1, R=1, J=8; P=1, R=1, J=8; D=0000 (MSB); D=0000 (LSB); PLL_clkin = MCLK, codec_clkin = PLL_CLK, PLL on; MDAC = 8, divider powered on; DOSR = 32 (MSB); DOSR = 32 (LSB); NADC = 2, divider powered off; MADC = 8, divider powered on; AOSR = 32; NDAC = 2, divider powered on 
+                    103:  ; P=1, R=1, J=8; P=1, R=1, J=8; D=0000 (MSB); D=0000 (LSB); PLL_clkin = MCLK, codec_clkin = PLL_CLK, PLL on; MDAC = 8, divider powered on; DOSR = 64 (MSB); DOSR = 64 (LSB); NADC = 2, divider powered off; MADC = 8, divider powered on; AOSR = 64; NDAC = 2, divider powered on 
+                    104:  	reg[  0][  5] = 0x91	; P=1, R=1, J=8 
+                    105:  	reg[  0][  6] = 0x08	; P=1, R=1, J=8 
+                    106:  	reg[  0][  7] = 0x00	; D=0000 (MSB) 
+                    107:  	reg[  0][  8] = 0x00	; D=0000 (LSB) 
+                    108:  	reg[  0][  4] = 0x03	; PLL_clkin = MCLK, codec_clkin = PLL_CLK, PLL on 
+                    109:  	reg[  0][ 12] = 0x88	; MDAC = 8, divider powered on 
+                    110:  	reg[  0][ 13] = 0x00	; DOSR = 128 (MSB) 
+                    111:  	reg[  0][ 14] = 0x80	; DOSR = 128 (LSB) 
+                    112:  	reg[  0][ 18] = 0x02	; NADC = 2, divider powered off 
+                    113:  	reg[  0][ 19] = 0x88	; MADC = 8, divider powered on 
+                    114:  	reg[  0][ 20] = 0x80	; AOSR = 128 
+                    115:  	reg[  0][ 11] = 0x82	; NDAC = 2, divider powered on 
+                    116:   
+                    117:  ; P=1, R=1, J=8; P=1, R=1, J=8; D=0000 (MSB); D=0000 (LSB); PLL_clkin = MCLK, codec_clkin = PLL_CLK, PLL on; MDAC = 8, divider powered on; DOSR = 192 (MSB); DOSR = 192 (LSB); NADC = 2, divider powered off; MADC = 12, divider powered on; AOSR = 128; NDAC = 2, divider powered on 
+                    118:  ; P=1, R=1, J=8; P=1, R=1, J=8; D=0000 (MSB); D=0000 (LSB); PLL_clkin = MCLK, codec_clkin = PLL_CLK, PLL on; MDAC = 8, divider powered on; DOSR = 256 (MSB); DOSR = 256 (LSB); NADC = 2, divider powered off; MADC = 16, divider powered on; AOSR = 128; NDAC = 2, divider powered on 
+                    119:  ; P=1, R=1, J=24; P=1, R=1, J=24; D=0000 (MSB); D=0000 (LSB); PLL_clkin = MCLK, codec_clkin = PLL_CLK, PLL on; MDAC = 8, divider powered on; DOSR = 384 (MSB); DOSR = 384 (LSB); NADC = 2, divider powered off; MADC = 24, divider powered on; AOSR = 128; NDAC = 2, divider powered on 
+                    120:  ; P=1, R=1, J=16; P=1, R=1, J=16; D=0000 (MSB); D=0000 (LSB); PLL_clkin = MCLK, codec_clkin = PLL_CLK, PLL on; MDAC = 8, divider powered on; DOSR = 512 (MSB); DOSR = 512 (LSB); NADC = 2, divider powered off; MADC = 32, divider powered on; AOSR = 128; NDAC = 2, divider powered on 
+                    121:  ; P=1, R=1, J=24; P=1, R=1, J=24; D=0000 (MSB); D=0000 (LSB); PLL_clkin = MCLK, codec_clkin = PLL_CLK, PLL on; MDAC = 8, divider powered on; DOSR = 768 (MSB); DOSR = 768 (LSB); NADC = 2, divider powered off; MADC = 48, divider powered on; AOSR = 128; NDAC = 2, divider powered on 
+                    122:   
+                    123:   
+                    124:  ;----------------------------------------------------------------------------------- 
+                    125:  ; ADC Channel Configuration 
+                    126:  ;----------------------------------------------------------------------------------- 
+                    127:  	reg[  1][ 51] = 0x40	; Mic Bias enabled, Source = Avdd, 1.25V 
+                    128:  	reg[  1][ 52] = 0x40	; Route IN1L to LEFT_P with 10K input impedance 
+                    129:  	reg[  1][ 54] = 0x40	; Route CM1L to LEFT_M with 10K input impedance 
+                    130:  	reg[  1][ 55] = 0x40	; Route IN1R to RIGHT_P with 10K input impedance 
+                    131:  	reg[  1][ 57] = 0x40	; Route CM1R to RIGHT_M with 10K input impedance 
+                    132:  	reg[  1][ 59] = 0x00	; Enable MicPGA_L Gain Control, 0dB 
+                    133:  	reg[  1][ 60] = 0x00	; Enable MicPGA_R Gain Control, 0dB 
+                    134:  	reg[  0][ 81] = 0xc0	; Power up LADC/RADC 
+                    135:  	reg[  0][ 82] = 0x00	; Unmute LADC/RADC 
+                    136:   
+                    137:  ;----------------------------------------------------------------------------------- 
+                    138:  ; DAC Channel Configuration 
+                    139:  ;----------------------------------------------------------------------------------- 
+                    140:  	reg[  1][ 12] = 0x08	; Route LDAC to HPL 
+                    141:  	reg[  1][ 13] = 0x08	; Route RDAC to HPR 
+                    142:  	reg[  1][ 14] = 0x08	; Route LDAC to LOL 
+                    143:  	reg[  1][ 15] = 0x08	; Route LDAC to LOR 
+                    144:  	reg[  0][ 63] = 0xd4	; Power up LDAC/RDAC w/ soft stepping 
+                    145:  	reg[  1][125] = 0x12	; GCHP Mode, Offset corr Enabled on present routing 
+                    146:  	reg[  1][ 16] = 0x00	; Unmute HPL driver, 0dB Gain 
+                    147:  	reg[  1][ 17] = 0x00	; Unmute HPR driver, 0dB Gain 
+                    148:  	reg[  1][ 18] = 0x00	; Unmute LOL driver, 0dB Gain 
+                    149:  	reg[  1][ 19] = 0x00	; Unmute LOR driver, 0dB Gain 
+                    150:  	reg[  1][  9] = 0x3c	; Power up HPL/HPR and LOL/LOR drivers 
+                    151:  	reg[  0][ 64] = 0x00	; Unmute LDAC/RDAC 
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+
+                                --- File: aic_gen.asm ---
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+                    495:  .codeblock Registers2 target=regs, component=Dec4xIn_1 
+                    496:  reg[0][82] = 0 
+                    497:   
+                    498:  ; Left channel AGC initialization 
+                    499:  reg[0][83] = 0 
+                    500:  reg[0][86] = 32 
+                    501:  reg[0][87] = 254  
+                    502:  reg[0][88] = 0 
+                    503:  reg[0][89] = 104 
+                    504:  reg[0][90] = 168 
+                    505:  reg[0][91] = 6 
+                    506:  reg[0][92] = 0 
+                    507:   
+                    508:  ; Right channel AGC initialization 
+                    509:  reg[0][84] = 0 
+                    510:  reg[0][94] = 32 
+                    511:  reg[0][95] = 254  
+                    512:  reg[0][96] = 0 
+                    513:  reg[0][97] = 104 
+                    514:  reg[0][98] = 168 
+                    515:  reg[0][99] = 6 
+                    516:  reg[0][100] = 0 
+XX|XXXXX  [XXXX] XXXXXX:  ****************encrypted****************************
+
+0 errors detected
