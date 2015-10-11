@@ -11,8 +11,7 @@ public:
 	// Deconstructor
 	virtual ~Audio_AIC();
 	// Constructor & Initialization
-	Audio_AIC(unsigned char address, GPIO_I2C i_i2c_manager);
-	Audio_AIC(unsigned char address, USCI_I2C i_i2c_manager);
+	Audio_AIC(unsigned char address, I2C i_i2c_manager);
 private: 
 	// Audio Chip Configuration With checking the Register 254 and 255
 	void Audio_AppWriteDSP(const reg_value *data,
