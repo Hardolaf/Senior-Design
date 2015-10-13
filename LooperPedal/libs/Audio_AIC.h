@@ -9,6 +9,7 @@
 #define LIBS_Audio_AIC_H_
 
 #include "I2C.h"
+#include "type.h"
 
 namespace LooperPedal {
 

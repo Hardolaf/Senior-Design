@@ -5,6 +5,7 @@
  *      Author: Eric Bauer
  */
 
+#include "type.h"
 #include "base_main_Rate44_pps_driver.h"
 #include "Audio_AIC.h"
 #include "I2C.h"
@@ -14,11 +15,11 @@
 
 namespace LooperPedal {
 
-Audio_AIC::~Audio_AIC(){
+Audio_AIC::~Audio_AIC() {
 	// TODO Deconstructor
 }
 
-Audio_AIC::Audio_AIC(unsigned char address, I2C &i_i2c_manager){
+Audio_AIC::Audio_AIC(unsigned char address, I2C &i_i2c_manager) {
 	i2c_manager = i_i2c_manager;
 	// Initialization of AIC device settings from Pure Path Studio File
 	Audio_AppWriteDSP(							// Load audio program
@@ -65,7 +66,7 @@ void Audio_AppWriteDSP(const reg_value *data,
 			default:
 				i2c_manager.Write(address,data[i].reg_off,data[i].reg_val);
 			}
-		}				
+		}
 }
 
 void Audio_RegValWriteDSP(const reg_value *data,

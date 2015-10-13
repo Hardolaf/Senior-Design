@@ -1,33 +1,35 @@
+#include "msp.h"
 #include <stdint.h>
+#include "type.h"
 
 //CONTROL LOCATIONS
 typedef struct {
-            u8 control_page;           //coefficient page location
-            u8 control_base;           //coefficient base address within page
-            u8 control_mute_flag;      //non-zero means muting required
-            u8 control_string_index;   //string table index
+            uint8_t control_page;           //coefficient page location
+            uint8_t control_base;           //coefficient base address within page
+            uint8_t control_mute_flag;      //non-zero means muting required
+            uint8_t control_string_index;   //string table index
 } control; 
 
 
 static const control MUX_controls[] = {
 };
 
-static const string MUX_control_names[] = {
+static const char* MUX_control_names[] = {
 };
 
 static const control VOLUME_controls[] = {
 };
 
-static const string VOLUME_control_names[] = {
+static const char* VOLUME_control_names[] = {
 };
 
 //INSTRUCTIONS & COEFFICIENTS
-typedef struct {
-    u8 reg_off;
-    u8 reg_val;
-} reg_value;
+//typedef struct {
+//    uint8_t reg_off;
+//    uint8_t reg_val;
+//} reg_value;
 
-static const string REG_Section_names[] = {
+static const char* REG_Section_names[] = {
     "miniDSP_A_reg_values",
     "miniDSP_D_reg_values",
 };
