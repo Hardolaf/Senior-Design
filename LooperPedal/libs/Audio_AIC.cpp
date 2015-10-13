@@ -4,7 +4,12 @@
  *  Created on: Oct 11, 2015
  *      Author: Eric Bauer
  */
- 
+
+#include "msp.h"
+#include <stdint.h>
+
+namespace LooperPedal {
+
 Audio_AIC::~Audio_AIC(){
 	// TODO Deconstructor
 }
@@ -76,3 +81,5 @@ void Audio_RegValWriteDSP(const reg_value *data, unsigned int length_data, unsig
 		}
 	}	
 }
+
+} /* namespace LooperPedal */

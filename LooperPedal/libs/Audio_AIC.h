@@ -4,8 +4,14 @@
  *  Created on: Oct 11, 2015
  *      Author: Eric Bauer
  */
- 
- 
+
+#ifndef LIBS_Audio_AIC_H_
+#define LIBS_Audio_AIC_H_
+
+#include "I2C.h"
+
+namespace LooperPedal {
+
 class Audio_AIC {
 public:
 	// Deconstructor
@@ -25,3 +31,7 @@ private:
 	void Audio_RegValWriteDSP(const reg_value *data, unsigned int length_data, unsigned char address);
 	I2C i2c_manager;
 };
+
+} /* namespace LooperPedal */
+
+#endif /* LIBS_I2C_H_ */
