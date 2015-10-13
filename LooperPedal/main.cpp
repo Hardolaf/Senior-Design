@@ -9,9 +9,9 @@
 /*    Include                                                                               */
 /********************************************************************************************/
 /* Internal libs */
-#include "Audio_AIC.h"
-#include "I2C.h"
-#include "GPIO_I2C.h"
+#include "libs/Audio_AIC.h"
+#include "libs/I2C.h"
+#include "libs/GPIO_I2C.h"
 //#include "USCI_I2C.h"
 
 /* MSP432 standard libs */
@@ -43,7 +43,7 @@ using namespace LooperPedal;
 /********************************************************************************************/
 int main() {
 	WDTCTL = WDTPW | WDTHOLD;           // Stop watchdog timer
-	I2C GPIO = new GPIO_I2C(GPIO_I2C_OUTP, GPIO_I2C_DIR, GPIO_I2C_IN,
+	I2C* GPIO = new GPIO_I2C(GPIO_I2C_OUTP, GPIO_I2C_DIR, GPIO_I2C_IN,
 			GPIO_I2C_SCL, GPIO_I2C_SDA);
 	//I2C USCI = new USCI_I2C(USCI_I2C_SCL, USCI_I2C_SDA);
 	Audio_AIC AIC = new Audio_AIC(AIC3256, GPIO);

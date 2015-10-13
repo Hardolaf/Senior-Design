@@ -1,6 +1,6 @@
 #include "msp.h"
 #include <stdint.h>
-#include "type.h"
+#include "../../LooperPedal/libs/type.h"
 
 //CONTROL LOCATIONS
 typedef struct {
