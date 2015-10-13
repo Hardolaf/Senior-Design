@@ -9,7 +9,7 @@
 /*    Include                                                                               */
 /********************************************************************************************/
 /* Internal libs */
-//#include "libs/Audio_AIC.h"
+#include "libs/Audio_AIC.h"
 #include "libs/I2C.h"
 #include "libs/GPIO_I2C.h"
 //#include "USCI_I2C.h"

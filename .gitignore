@@ -59,7 +59,7 @@ local.properties
 .loadpath
 
 # Eclipse Core
-.project
+
 
 # External tool builders
 .externalToolBuilders/
@@ -68,7 +68,7 @@ local.properties
 *.launch
 
 # CDT-specific
-.cproject
+
 
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
