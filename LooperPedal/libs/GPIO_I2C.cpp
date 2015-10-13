@@ -15,22 +15,6 @@ GPIO_I2C::~GPIO_I2C() {
 	// TODO Destructor
 }
 
-GPIO_I2C::GPIO_I2C(unsigned long i_OUTP, unsigned long i_DIR,
-		unsigned long i_IN, uint16_t i_SDA, uint16_t i_SCL) {
-	// Set internal variables
-	OUTP = i_OUTP;
-	DIR = i_DIR;
-	IN = i_IN;
-	SDA = i_SDA;
-	SCL = i_SCL;
-
-	// Initialize the port
-	// Set output to low
-	HWREG8(OUTP) &= ~(SDA | SCL);
-	// Set direction of SDA and SCL to input to drive it high through pullup
-	HWREG8(DIR) &= ~(SDA | SCL);
-}
-
 void GPIO_I2C::Start() {
 	// Set direction of SDA and SCL to input to drive it high through pullup
 	HWREG8(DIR) &= ~(SDA | SCL);
@@ -93,8 +77,8 @@ unsigned char GPIO_I2C::RX_Byte() {
 	HWREG8(DIR) &= ~SDA;
 
 	// Process 8 bits
-	 for(mask=0x80;mask;mask >>=1) {
-		if((HWREG8(IN & SDA ) != 0) {
+	 for(mask=0x80; mask;mask >>=1) {
+		if((HWREG8(IN & SDA ) != 0)) {
 			// bit is high
 			byte |= mask;
 			//Make clock cycle
@@ -128,9 +112,7 @@ void GPIO_I2C::Write(unsigned char slave_address, unsigned char register_address
 
 unsigned char GPIO_I2C::Read(unsigned char slave_address, unsigned char register_address) {
 	unsigned char byte = 0x00;
-	unsigned char address = 0x00;
 	Start();                          // Start I2C transaction
-	address = slave_address | 0x01;
 	TX_Byte(slave_address);           // Slave peripheral address
 	TX_Byte(register_address);        // peripheral register address
 	Stop();
@@ -141,13 +123,14 @@ unsigned char GPIO_I2C::Read(unsigned char slave_address, unsigned char register
 	return byte;
 }
 
-void GPIO_I2C::WriteMultiBytes(unsigned char slave_address, unsigned char register_address, unsigned char write_length, unsigned char *tx_array) {
-	unsigned int i;
+void GPIO_I2C::WriteMultiBytes(unsigned char slave_address,
+		unsigned char register_address,
+		unsigned char write_length,
+		unsigned char *tx_array) {
    Start();                           // Start I2C transaction
    TX_Byte(slave_address);            // Slave peripheral address
    TX_Byte(register_address);         // peripheral register address
-   for(i=0;i<length;i++)
-   {
+   for(unsigned int i=0; i<write_length; i++) {
        TX_Byte(tx_array[i]);          // Data
    }
    Stop();                            // Stop I2C transaction

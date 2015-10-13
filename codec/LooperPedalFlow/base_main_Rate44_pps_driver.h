@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 //CONTROL LOCATIONS
 typedef struct {
             u8 control_page;           //coefficient page location

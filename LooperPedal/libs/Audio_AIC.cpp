@@ -5,6 +5,10 @@
  *      Author: Eric Bauer
  */
 
+#include "base_main_Rate44_pps_driver.h"
+#include "Audio_AIC.h"
+#include "I2C.h"
+#include "misc.h"
 #include "msp.h"
 #include <stdint.h>
 
@@ -14,7 +18,7 @@ Audio_AIC::~Audio_AIC(){
 	// TODO Deconstructor
 }
 
-Audio_AIC::Audio_AIC(unsigned char address, GPIO_I2C i_i2c_manager){
+Audio_AIC::Audio_AIC(unsigned char address, I2C &i_i2c_manager){
 	i2c_manager = i_i2c_manager;
 	// Initialization of AIC device settings from Pure Path Studio File
 	Audio_AppWriteDSP(							// Load audio program
@@ -64,8 +68,10 @@ void Audio_AppWriteDSP(const reg_value *data,
 		}				
 }
 
-void Audio_RegValWriteDSP(const reg_value *data, unsigned int length_data, unsigned char address){
-	for(i=0; i<length_data; i++)
+void Audio_RegValWriteDSP(const reg_value *data,
+		unsigned int length_data,
+		unsigned char address){
+	for(int i=0; i<length_data; i++)
 	{
 		switch(data[i].reg_off)
 		{

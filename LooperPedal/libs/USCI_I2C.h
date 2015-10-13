@@ -9,6 +9,7 @@
 #define LIBS_USCI_I2C_H_
 
 #include "I2C.h"
+#include <stdint.h>
 
 namespace LooperPedal {
 

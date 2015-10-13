@@ -9,6 +9,8 @@
 #define LIBS_GPIO_I2C_H_
 
 #include "I2C.h"
+#include "msp.h"
+#include <stdint.h>
 
 namespace LooperPedal {
 
@@ -17,11 +19,35 @@ public:
 	// Deconstructor
 	virtual ~GPIO_I2C();
 	// Constructor
-	GPIO_I2C(unsigned long i_OUTP, unsigned long i_DIR, unsigned long i_IN, uint16_t i_SDA, uint16_t i_SCL);
+	GPIO_I2C(unsigned long i_OUTP,
+			unsigned long i_DIR,
+			unsigned long i_IN,
+			uint16_t i_SDA,
+			uint16_t i_SCL) : I2C()
+	{
+		// Set internal variables
+		OUTP = i_OUTP;
+		DIR = i_DIR;
+		IN = i_IN;
+		SDA = i_SDA;
+		SCL = i_SCL;
+
+		// Initialize the port
+		// Set output to low
+		HWREG8(OUTP) &= ~(SDA | SCL);
+		// Set direction of SDA and SCL to input to drive it high through pullup
+		HWREG8(DIR) &= ~(SDA | SCL);
+	}
+
 	// I2C Write Function
-	void Write(unsigned char slave_address, unsigned char register_address, unsigned char txdata);
+	void Write(unsigned char slave_address,
+			unsigned char register_address,
+			unsigned char txdata);
 	// I2C Multi-byte Write
-	void WriteMultiBytes(unsigned char slave_address, unsigned char register_address, unsigned char write_length, unsigned char *tx_array);
+	void WriteMultiBytes(unsigned char slave_address,
+			unsigned char register_address,
+			unsigned char write_length,
+			unsigned char *tx_array);
 	// I2C Read Function
 	unsigned char Read(unsigned char slave_address, unsigned char register_address);
 private:
