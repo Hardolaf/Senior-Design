@@ -1,19 +1,18 @@
 /*
  * type.h
  *
- *  Created on: Oct 13, 2015
- *      Author: warne_000
+ * Copyright 2015 Joseph Warner, Eric Bauer, Gus Fragasse
  */
 
-#ifndef LIBS_TYPE_H_
-#define LIBS_TYPE_H_
+#ifndef LOOPERPEDAL_LIBS_TYPE_H_
+#define LOOPERPEDAL_LIBS_TYPE_H_
 
-/********************************************************************************************/
-/*    Type Definitions                                                                      */
-/********************************************************************************************/
+/*
+ * Type Definitions
+ */
 typedef struct {
-    unsigned char reg_off;
-    unsigned char reg_val;
+  unsigned char reg_off;
+  unsigned char reg_val;
 } reg_value;
 
-#endif /* LIBS_TYPE_H_ */
+#endif  // LOOPERPEDAL_LIBS_TYPE_H_

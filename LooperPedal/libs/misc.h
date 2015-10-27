@@ -1,15 +1,12 @@
 /*
  * misc.h
  *
- *  Created on: Oct 13, 2015
- *      Author: warne_000
+ * Copyright 2015 Joseph Warner, Eric Bauer, Gus Fragasse
  */
 
-#ifndef LIBS_MISC_H_
-#define LIBS_MISC_H_
+#ifndef LOOPERPEDAL_LIBS_MISC_H_
+#define LOOPERPEDAL_LIBS_MISC_H_
 
+void Delay_ms(unsigned int time);
 
-void Delay_ms(unsigned int time)
-
-
-#endif /* LIBS_MISC_H_ */
+#endif /* LOOPERPEDAL_LIBS_MISC_H_ */
