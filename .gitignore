@@ -55,7 +55,7 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.settings/
+#.settings/
 .loadpath
 
 # Eclipse Core
@@ -85,7 +85,6 @@ local.properties
 # TeXlipse plugin
 .texlipse
 
-.cproject
 
 
 RemoteSystemsTempFiles
