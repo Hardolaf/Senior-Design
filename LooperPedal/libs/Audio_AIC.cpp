@@ -13,7 +13,7 @@
 #include "msp.h"
 #include <stdint.h>
 
-namespace LooperPedal {{
+namespace LooperPedal {
 
 Audio_AIC::~Audio_AIC() {
 	// TODO Deconstructor
