@@ -8,7 +8,7 @@
 #include <msp.h>
 #include <stdint.h>
 // Cpp headers
-// #include "libs/Audio_AIC.h"
+#include "libs/Audio_AIC.h"
 #include "libs/I2C.h"
 #include "libs/GPIO_I2C.h"
 // #include "USCI_I2C.h"
@@ -16,7 +16,7 @@
 /*
  * Namespaces
  */
-// using LooperPedal::Audio_AIC;
+using LooperPedal::Audio_AIC;
 using LooperPedal::GPIO_I2C;
 using LooperPedal::I2C;
 // using LooperPedal::USCI_I2C;
@@ -44,5 +44,5 @@ int main() {
   I2C* GPIO = new GPIO_I2C(GPIO_I2C_OUTP, GPIO_I2C_DIR, GPIO_I2C_IN,
                            GPIO_I2C_SCL, GPIO_I2C_SDA);
   // I2C USCI = new USCI_I2C(USCI_I2C_SCL, USCI_I2C_SDA);
-  // Audio_AIC AIC = new Audio_AIC(AIC3256, GPIO);
+  Audio_AIC* AIC = new Audio_AIC(AIC3256, GPIO);
 }
