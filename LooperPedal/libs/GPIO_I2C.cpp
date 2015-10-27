@@ -16,6 +16,14 @@ GPIO_I2C::~GPIO_I2C() {
   // Destructor
 }
 
+void GPIO_I2C::setPort() {
+  // Initialize the port
+  // Set output to low
+  HWREG8(OUTP) &= ~(SDA | SCL);
+  // Set direction of SDA and SCL to input to drive it high through pullup
+  HWREG8(DIR) &= ~(SDA | SCL);
+}
+
 void GPIO_I2C::Start() {
   // Set direction of SDA and SCL to input to drive it high through pullup
   HWREG8(DIR) &= ~(SDA | SCL);

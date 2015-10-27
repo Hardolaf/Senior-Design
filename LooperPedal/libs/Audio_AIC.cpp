@@ -22,19 +22,6 @@ Audio_AIC::~Audio_AIC() {
   //  Deconstructor
 }
 
-Audio_AIC::Audio_AIC(unsigned char address, I2C* i_i2c_manager) {
-  i2c_manager = *i_i2c_manager;
-  // Initialization of AIC device settings from Pure Path Studio File
-  Audio_AppWriteDSP(
-      // Load audio program
-      REG_Section_program,   // Configuration array generated from Pure Path
-                             // Studio
-      miniDSP_A_reg_values,  // miniDSP_A C-RAM and I-RAM
-      miniDSP_D_reg_values,  // miniDSP_D C-RAM and I-RAM
-      sizeof(REG_Section_program) / 2, sizeof(miniDSP_A_reg_values) / 2,
-      sizeof(miniDSP_D_reg_values) / 2, address);
-}
-
 void Audio_AIC::Audio_AppWriteDSP(const reg_value* data,
                                   const reg_value* DSP_A_data,
                                   const reg_value* DSP_D_data,

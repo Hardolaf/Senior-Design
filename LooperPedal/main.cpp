@@ -16,7 +16,10 @@
 /*
  * Namespaces
  */
-using namespace LooperPedal;
+// using LooperPedal::Audio_AIC;
+using LooperPedal::GPIO_I2C;
+using LooperPedal::I2C;
+// using LooperPedal::USCI_I2C;
 
 /*
  * Definitions

@@ -33,11 +33,18 @@ class GPIO_I2C : public I2C {
     SDA = i_SDA;
     SCL = i_SCL;
 
-    // Initialize the port
-    // Set output to low
-    HWREG8(OUTP) &= ~(SDA | SCL);
-    // Set direction of SDA and SCL to input to drive it high through pullup
-    HWREG8(DIR) &= ~(SDA | SCL);
+    this->setPort();
+  }
+
+  // Copy constructor
+  GPIO_I2C(const GPIO_I2C& that)
+      : I2C(),
+        OUTP(that.OUTP),
+        DIR(that.DIR),
+        IN(that.IN),
+        SDA(that.SDA),
+        SCL(that.SCL) {
+    this->setPort();
   }
 
   // I2C Write Function
@@ -55,6 +62,7 @@ class GPIO_I2C : public I2C {
 
  private:
   /* =========== Methods =========== */
+  void setPort();
   // Generate a Start Flag in I2C
   void Start();
   // Generate a Stop Flag in I2C

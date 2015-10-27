@@ -1,3 +1,6 @@
+#ifndef BASE_MAIN_RATE44_PPS_DRIVER_H_
+#define BASE_MAIN_RATE44_PPS_DRIVER_H_
+
 #include "msp.h"
 #include <stdint.h>
 #include "../../LooperPedal/libs/type.h"
@@ -3956,3 +3959,5 @@ static const reg_value miniDSP_D_reg_values[] = {
 #define miniDSP_D_reg_values_COEFF_SIZE    300
 #define miniDSP_D_reg_values_INST_START    300
 #define miniDSP_D_reg_values_INST_SIZE     799
+
+#endif // BASE_MAIN_RATE44_PPS_DRIVER_H_
