@@ -58,39 +58,38 @@
  *  Toggle the Board_LED0. The Task_sleep is determined by arg0 which
  *  is configured for the heartBeat Task instance.
  */
-Void heartBeatFxn(UArg arg0, UArg arg1)
-{
-    while (1) {
-        Task_sleep((UInt)arg0);
-        GPIO_toggle(Board_LED0);
-    }
+Void heartBeatFxn(UArg arg0, UArg arg1) {
+  while (1) {
+    Task_sleep((UInt)arg0);
+    GPIO_toggle(Board_LED0);
+  }
 }
 
 /*
  *  ======== main ========
  */
-int main(void)
-{
-    /* Call board init functions */
-    Board_initGeneral();
-    Board_initGPIO();
-    // Board_initI2C();
-    // Board_initSDSPI();
-    // Board_initSPI();
-    // Board_initUART();
-    // Board_initWatchdog();
-    // Board_initWiFi();
+int main(void) {
+  /* Call board init functions */
+  Board_initGeneral();
+  Board_initGPIO();
+  // Board_initI2C();
+  // Board_initSDSPI();
+  // Board_initSPI();
+  // Board_initUART();
+  // Board_initWatchdog();
+  // Board_initWiFi();
 
-    /* Turn on user LED */
-    GPIO_write(Board_LED0, Board_LED_ON);
+  /* Turn on user LED */
+  GPIO_write(Board_LED0, Board_LED_ON);
 
-    System_printf("Starting the example\nSystem provider is set to SysMin. "
-                  "Halt the target to view any SysMin contents in ROV.\n");
-    /* SysMin will only print to the console when you call flush or exit */
-    System_flush();
+  System_printf(
+      "Starting the example\nSystem provider is set to SysMin. "
+      "Halt the target to view any SysMin contents in ROV.\n");
+  /* SysMin will only print to the console when you call flush or exit */
+  System_flush();
 
-    /* Start BIOS */
-    BIOS_start();
+  /* Start BIOS */
+  BIOS_start();
 
-    return (0);
+  return (0);
 }

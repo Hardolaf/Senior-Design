@@ -7,6 +7,7 @@
 // C headers
 #include <msp.h>
 #include <stdint.h>
+#include "driverlib.h"
 // Cpp headers
 #include "libs/Audio_AIC.h"
 #include "libs/I2C.h"
